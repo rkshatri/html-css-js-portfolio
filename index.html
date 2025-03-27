@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Rohan Kshatriya</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
     <nav id="desktop-nav">
-        <div class="logo">Rohan Kshatriya</div>
+        <div class="logo"><a href="#about">Rohan Kshatriya</a></div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -37,7 +37,10 @@
     </nav>
     <section id="profile">
         <div class="section__pic-container">
-            <img src="./assets/profile-pic.png" alt="Rohan Kshatriya profile picture">
+            <div class="flip-image">
+                <img class="profile-pic front" src="./assets/profile-pic-transparent.png" alt="Rohan Kshatriya profile picture">
+                <img class="profile-pic back" src="./assets/profile-pic-back-transparent.png" alt="Profile picture back">
+            </div>
         </div>
         <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
@@ -58,13 +61,13 @@
                 src="./assets/linkedin.png"
                 alt="My LinkedIn profile"
                 class="icon" 
-                onclick="location.href='https://www.linkedin.com/in/rohan-kshatriya'"
+                onclick="window.open('https://www.linkedin.com/in/rohan-kshatriya')"
                 />
                 <img 
                 src="./assets/github.png"
                 alt="My GitHub profile"
                 class="icon" 
-                onclick="location.href='https://github.com/rkshatri'"
+                onclick="window.open('https://github.com/rkshatri')"
                 />
             </div>
         </div>
@@ -85,7 +88,7 @@
                         <img 
                         src="./assets/experience.png" 
                         alt="Experience icon" 
-                        class="icon">
+                        class="icon non-click-icon">
                         <h3>Experience</h3>
                         <p>Data Analysis <br>Research, AI, Health</p>
                     </div>
@@ -93,18 +96,18 @@
                         <img 
                         src="./assets/education.png" 
                         alt="Education icon" 
-                        class="icon">
+                        class="icon non-click-icon">
                         <h3>Education</h3>
                         <p>Pursuing B.S. in Comp. Science<br>@ Arizona State University</p>
                     </div>
                 </div>
                 <div class="text-container">
-                    <p>My name is Rohan Kshatriya and I am currently pursuing a Bachelor of Science, majoring in Computer Science with a minor in Computational Life Sciences at Arizona State University. I have a passion for computing, health, and the blend of both. In my free time, I love to golf, dance, and write code.</p>
+                    <p>My name is Rohan Kshatriya and I am pursuing a Bachelor of Science, majoring in Computer Science with a minor in Computational Life Sciences at Arizona State University. I have a passion for computing, health, and the blend of both. In my free time, I love to golf, dance, and write code.</p>
                 </div>
             </div>
         </div>
         <img 
-        src="./assets/arrow.png" 
+        src="./assets/arrow.png"
         alt="Arrow icon" 
         class="icon arrow"
         onclick="location.href='./#experience'">
@@ -244,17 +247,18 @@
                         alt="Project 1"
                         class="project-img">
                     </div>
-                    <h2 class="experience-sub-title project-title">Project One</h2>
+                    <h2 class="experience-sub-title project-title">Speech Recognition for Disordered Speech</h2>
+                    <p class="project-description">Developed a model to optimize speech recognition for patients with tremors, breaks, and breathiness. Presented at Harvard Medical School.</p>
                     <div class="btn-container">
                         <button 
                         class="btn btn-color-2 project-btn"
-                        onclick="location.href='https://github.com/'">
-                        Github
+                        onclick="window.open('https://youtu.be/MX1qmqKxPAA')">
+                        Demo Video
                         </button>
                         <button 
                         class="btn btn-color-2 project-btn"
-                        onclick="location.href='https://github.com/'">
-                        Live Demo
+                        onclick="window.open('https://simonyanlab.meei.harvard.edu')">
+                        Lab Website
                         </button>
                     </div>
                 </div>
@@ -265,18 +269,19 @@
                         alt="Project 2"
                         class="project-img">
                     </div>
-                    <h2 class="experience-sub-title project-title">Project Two</h2>
+                    <h2 class="experience-sub-title project-title">Predicting Origin of COVID-19 Genome</h2>
+                    <p class="project-description">Preprocessed genomic data and converted it into a feature matrix. Developed a logistic regression model to predict the country of origin for SARS-CoV-2 samples.</p>
                     <div class="btn-container">
                         <button 
                         class="btn btn-color-2 project-btn"
-                        onclick="location.href='https://github.com/'">
-                        Github
+                        onclick="window.open('https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=SARS-CoV-2,%20taxid:2697049&SLen_i=29000%20TO%2031000&Completeness_s=complete&HostLineage_ss=Homo%20sapiens%20(human),%20taxid:9606')">
+                        DNA Database
                         </button>
-                        <button 
+                        <!-- <button 
                         class="btn btn-color-2 project-btn"
                         onclick="location.href='https://github.com/'">
                         Live Demo
-                        </button>
+                        </button> -->
                     </div>
                 </div>
                 <div class="details-container color-container">
@@ -286,18 +291,19 @@
                         alt="Project 3"
                         class="project-img">
                     </div>
-                    <h2 class="experience-sub-title project-title">Project Three</h2>
+                    <h2 class="experience-sub-title project-title">Maze-Solving Robotic Car</h2>
+                    <p class="project-description">Engineered a self-driving LEGO robotic car that picked up a passenger, navigated a maze, and dropped them off. Used Matlab and LEGO EV3 architecture.</p>
                     <div class="btn-container">
                         <button 
                         class="btn btn-color-2 project-btn"
-                        onclick="location.href='https://github.com/'">
-                        Github
+                        onclick="window.open('https://www.youtube.com/watch?v=Ek3ysw-phnw')">
+                        Demo Video
                         </button>
-                        <button 
+                        <!-- <button 
                         class="btn btn-color-2 project-btn"
                         onclick="location.href='https://github.com/'">
                         Live Demo
-                        </button>
+                        </button> -->
                     </div>
                 </div>
             </div>
@@ -321,10 +327,17 @@
             </div>
             <div class="contact-info-container">
                 <img 
+                src="./assets/phone.png"
+                alt="Phone icon"
+                class="icon contact-icon phone-icon">
+                <p><a href="tel:480-465-7640">480-465-7640</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img 
                 src="./assets/linkedin.png" 
                 alt="LinkedIn icon"
                 class="icon contact-icon">
-                <p><a href="https://www.linkedin.com/in/rohan-kshatriya">LinkedIn</a></p>
+                <p><a href="https://www.linkedin.com/in/rohan-kshatriya" target="blank_">LinkedIn</a></p>
             </div>
         </div>
     </section>
@@ -332,6 +345,7 @@
         <nav>
             <div class="nav-links-container">
                 <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>

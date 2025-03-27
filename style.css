@@ -118,6 +118,12 @@ a:hover {
 
 .menu-links.open {
     max-height: 300px;
+    z-index: 1;
+    border-radius: 1rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    margin: 15px;
+    padding: 5px;
 }
 
 .hamburger-icon.open span:first-child {
@@ -167,11 +173,34 @@ section {
     height: 80vh;
 }
 
-.section__pic-container {
+.section__pic-container, .flip-image {
     display: flex;
     height: 400px;
     width: 400px;
     margin: 0 auto;
+}
+
+.flip-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.section__pic-container:hover .flip-image {
+    transform: rotateY(180deg);
+}
+
+.profile-pic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
 }
 
 .section__text {
@@ -209,6 +238,9 @@ section {
 .icon {
     cursor: pointer;
     height: 2rem;
+}
+.non-click-icon {
+    cursor: default;
 }
 
 /* BUTTONS */
@@ -317,7 +349,7 @@ section {
 .experience-sub-title {
     color: rgb(85, 85, 85);
     font-weight: 600;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
@@ -364,8 +396,12 @@ article .icon {
 }
 
 .project-title {
-    margin: 1rem;
+    margin: 0.75rem;
     color: black;
+}
+
+.project-description {
+    margin: 0.75rem;
 }
 
 .project-btn {
@@ -407,11 +443,17 @@ article .icon {
 
 .contact-icon {
     cursor: default;
+    margin-right: 0.25rem;
 }
 
 .email-icon {
     height: 2.5rem;
 }
+
+.phone-icon {
+    height: 2.0rem;
+}
+
 
 /* FOOTER */
 
